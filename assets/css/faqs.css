@@ -1,0 +1,180 @@
+:root {
+
+  /**
+   * colors
+   */
+
+   --gold: #c3932f;
+   --shade-gold:#ccac66;
+   --spanish-gray: hsl(0, 0%, 60%);
+   --black-coral: hsl(225, 8%, 42%);
+   --main-green: #00685e;
+   --light-green:#0d9b98;
+   --gainsboro: hsl(0, 0%, 88%);
+   --cultured: hsl(0, 0%, 98%);
+   --white: hsl(0, 0%, 100%);
+   --black: hsl(0, 0%, 0%);
+   --onyx: hsl(0, 0%, 25%);
+   --jet: hsl(0, 0%, 20%);
+ 
+
+  /**
+   * typography
+   */
+
+   --ff-playfair: 'Playfair Display', serif;
+   --ff-helvetica: 'Helvetica', sans-serif;
+
+  --fs-1: calc(20px + 3.5vw);
+  --fs-2: calc(18px + 1.6vw);
+  --fs-3: calc(16px + 0.45vw);
+  --fs-4: 0.94rem;
+  --fs-5: 0.88rem;
+  --fs-6: 0.81rem;
+  --fs-7: 0.75rem;
+  --fs-8: 0.69rem;
+
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-700: 700;
+  --fw-800: 800;
+
+  /**
+   * transition
+   */
+
+  --transition: 0.25s ease-in-out;
+
+  /**
+   * spacing
+   */
+
+  --section-padding: 60px;
+
+  /**
+   * border-radius
+   */
+
+  --radius-15: 15px;
+  --radius-25: 25px;
+
+}
+
+body{
+  background-color:var(--gold);
+  font-family: var(--ff-helvetica);
+}
+
+.header-top{
+  background-color: var(--main-green);
+}
+
+.faqs{
+  margin-top: 9rem;
+} 
+
+
+
+  .faqs-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+  
+  .faq{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    height: fit-content;
+    background: var(--shade-gold);
+    cursor: pointer;
+  }
+  
+  .faq h4{
+    font-size: 1rem;
+    
+  }
+
+  .faq :is(h4, p, i){
+    color: var(--white);
+  }
+  
+  .faqs h2{
+    color: var(--white);
+    font-size: var(--fs-2);
+    font-weight: var(--fw-800);
+    font-family: var(--ff-playfair);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 2rem;
+    
+  }
+  
+  .faq-icon{
+    align-self: flex-start;
+    font-size: 1rem;
+  
+    
+  }
+  
+  
+  .faq p{
+    margin-top: 0.8rem;
+    display: none;
+  }
+  
+  .faq.open p{
+    display: block ;
+  }
+
+  .request p{
+    margin-bottom: 1rem;
+    white-space: nowrap;
+  }
+
+  .request{
+    margin-top: 1rem;
+    padding: 2rem;
+    border-top: 1px solid var(--white);
+    display: grid;
+    place-items: center;
+    color: var(--white);
+  }
+
+  .request button{
+    transition: var(--transition);
+    color: var(--white);
+    font-weight: var(--fw-500);
+    border-radius: 30px;
+    padding: 0.8rem 1.5rem;
+    outline: 1px solid var(--white);
+  }
+
+  .request button:is(:hover, :focus) {
+    transition: var(--transition);
+    color: var(--white);
+    background: rgba(0, 0, 0, 0.20);
+    border-color: var(--yale-blue);
+  }
+
+
+
+  @media (min-width: 580px){
+/*     .faqs-container{
+      grid-template-columns: 1fr;
+    } */
+  }
+
+  @media (min-width: 768px){
+    .faqs-container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1200px){
+    .faqs-container{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
