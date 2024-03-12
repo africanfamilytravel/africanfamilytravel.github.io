@@ -334,7 +334,7 @@ fill: #00685e;}
   text-transform: capitalize;
 }
 
-.navbar-link:is(:hover, :focus) { color: var(--gold); }
+/* .navbar-link:is(:hover, :focus) { color: var(--gold); } */
 
 .overlay {
   position: fixed;
